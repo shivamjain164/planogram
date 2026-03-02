@@ -1,0 +1,12 @@
+{% include "base.html" %}
+
+{% block body %}
+
+<h3>Add site Data</h3>
+    <form method="post", action="{% url 'site_add' %}">
+        {% csrf_token %}
+        {{form}}
+        <button type="submit">Submit</button>
+    </form>
+
+{% endblock%}

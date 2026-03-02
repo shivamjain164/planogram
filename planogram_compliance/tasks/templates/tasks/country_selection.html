@@ -1,0 +1,15 @@
+{% include "base.html" %}
+
+{% block body %}
+<a href="{% url "country_add" %}" class="btn btn-primary  active" role="button" aria-pressed="true">Add Country</a>
+<p></p>
+<p></p>
+<p></p>
+<ol class="list-group list-group-numbered">
+{% for country in country_data %}
+    
+    <li class="list-group-item"><a href="{% url "task" country.id %}">{{country}}</a></li>
+
+{% endfor %}
+</ol>
+{% endblock body %}
