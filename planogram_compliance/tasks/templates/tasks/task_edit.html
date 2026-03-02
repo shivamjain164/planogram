@@ -1,9 +1,0 @@
-{% include "base.html" %}
-
-{% block body %}
-<form method="post" enctype="multipart/form-data" action="{% url 'task_edit' task_id %}">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit" class="btn btn-primary">Save</button>
-</form>
-{% endblock body %}
